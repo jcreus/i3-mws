@@ -1,0 +1,55 @@
+# Sample changes to i3 config
+
+set $mod Mod1
+set $mod2 Mod4
+
+exec_always --no-startup-id "killall mws-server; sleep 0.5; mws-server"
+bindsym $mod+1 exec --no-startup-id "mws-client 1 k"
+bindsym $mod+2 exec --no-startup-id "mws-client 2 k"
+bindsym $mod+3 exec --no-startup-id "mws-client 3 k"
+bindsym $mod+4 exec --no-startup-id "mws-client 4 k"
+bindsym $mod+5 exec --no-startup-id "mws-client 5 k"
+bindsym $mod+6 exec --no-startup-id "mws-client 6 k"
+bindsym $mod+7 exec --no-startup-id "mws-client 7 k"
+bindsym $mod+8 exec --no-startup-id "mws-client 8 k"
+bindsym $mod+9 exec --no-startup-id "mws-client 9 k"
+bindsym $mod+0 exec --no-startup-id "mws-client 0 k"
+
+bindsym $mod2+1 exec --no-startup-id "mws-client 1 s"
+bindsym $mod2+2 exec --no-startup-id "mws-client 2 s"
+bindsym $mod2+3 exec --no-startup-id "mws-client 3 s"
+bindsym $mod2+4 exec --no-startup-id "mws-client 4 s"
+bindsym $mod2+5 exec --no-startup-id "mws-client 5 s"
+bindsym $mod2+6 exec --no-startup-id "mws-client 6 s"
+bindsym $mod2+7 exec --no-startup-id "mws-client 7 s"
+bindsym $mod2+8 exec --no-startup-id "mws-client 8 s"
+bindsym $mod2+9 exec --no-startup-id "mws-client 9 s"
+bindsym $mod2+0 exec --no-startup-id "mws-client 0 s"
+
+bindsym $mod+Shift+1 exec --no-startup-id "mws-client 1 m"
+bindsym $mod+Shift+2 exec --no-startup-id "mws-client 2 m"
+bindsym $mod+Shift+3 exec --no-startup-id "mws-client 3 m"
+bindsym $mod+Shift+4 exec --no-startup-id "mws-client 4 m"
+bindsym $mod+Shift+5 exec --no-startup-id "mws-client 5 m"
+bindsym $mod+Shift+6 exec --no-startup-id "mws-client 6 m"
+bindsym $mod+Shift+7 exec --no-startup-id "mws-client 7 m"
+bindsym $mod+Shift+8 exec --no-startup-id "mws-client 8 m"
+bindsym $mod+Shift+9 exec --no-startup-id "mws-client 9 m"
+bindsym $mod+Shift+0 exec --no-startup-id "mws-client 0 m"
+
+bindsym $mod2+Shift+1 exec --no-startup-id "mws-client 1 w"
+bindsym $mod2+Shift+2 exec --no-startup-id "mws-client 2 w"
+bindsym $mod2+Shift+3 exec --no-startup-id "mws-client 3 w"
+bindsym $mod2+Shift+4 exec --no-startup-id "mws-client 4 w"
+bindsym $mod2+Shift+5 exec --no-startup-id "mws-client 5 w"
+bindsym $mod2+Shift+6 exec --no-startup-id "mws-client 6 w"
+bindsym $mod2+Shift+7 exec --no-startup-id "mws-client 7 w"
+bindsym $mod2+Shift+8 exec --no-startup-id "mws-client 8 w"
+bindsym $mod2+Shift+9 exec --no-startup-id "mws-client 9 w"
+bindsym $mod2+Shift+0 exec --no-startup-id "mws-client 0 w"
+
+bar {
+    status_command i3status
+    strip_workspace_numbers yes
+}
+
