@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <time.h>
 #include <linux/limits.h>
-#include <i3/ipc.h>
 #include "json.h"
 
 #define MULTI_SCREEN
@@ -79,7 +78,7 @@ int connect_i3_ipc() {
 	char subscribe[] = "i3-ipc12341234[ \"workspace\", \"output\" ]\n";
 	int len = strlen(subscribe+14);
 	memcpy(subscribe+6, (char*)&len, 4);
-	int type = I3_IPC_MESSAGE_TYPE_SUBSCRIBE;
+	int type = 2;
 	memcpy(subscribe+10, (char*)&type, 4);
 	write(i3_socket_fd, subscribe, sizeof(subscribe));
 	for (int i=0; i<sizeof(subscribe); i++) {
