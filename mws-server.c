@@ -9,7 +9,7 @@
 #include <linux/limits.h>
 #include "json.h"
 
-#define MULTI_SCREEN
+//#define MULTI_SCREEN
 
 #ifdef MULTI_SCREEN
 char *WORKSPACES[] = {"eDP1", "HDMI1"};
