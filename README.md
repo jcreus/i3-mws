@@ -5,8 +5,8 @@
   <img src="demo.png">
 </p>
 
-- It extends the standard i3 workspaces to have 100 workspaces, addressable using separate mod keys: 10 "master" workspaces (controlled by one mod key) with 10 child workspaces each.
-  - For instance, general purpose containers can be kept in the master workspace 1, and each major concurrent project can have its own set of 10 workspaces.
+- It extends the standard i3 workspaces to have 100 workspaces, addressable using separate mod keys: 10 "master" workspaces (controlled by one mod key) with 10 child workspaces each (controlled by the normal mod key).
+  - For instance, general purpose containers can be kept in the master workspace 1, and each major concurrent project can have its own set of 10 workspaces; instead of having to divide multiple projects and browser instances across only ten workspaces.
   - `$mod+#` switches to child workspace `#` under the current master workspace (same as in normal i3 operation).
   - `$mod2+#` switches to master workspace `#`, remembering the last child workspace used in that master workspace.
   - `$mod+Shift+#` moves the current container to child workspace `#`, also much like standard i3.
