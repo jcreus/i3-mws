@@ -10,7 +10,12 @@
 #include <i3/ipc.h>
 #include "json.h"
 
+#define MULTI_SCREEN
+
+#ifdef MULTI_SCREEN
 char *WORKSPACES[] = {"eDP1", "HDMI1"};
+#endif
+
 
 int max(int a, int b) {
 	return a > b ? a : b;
@@ -212,7 +217,9 @@ int main(void) {
 				last[master] = '0' + (num%10);
 				printf("GOT %c %c\n", master, last[master]);
 				json_object_put(obj);
-			} else if (num > 14 && strncmp(i3_buffer+14, "{\"change\":\"unspecified\"", 20) == 0
+			}
+		#ifdef MULTI_SCREEN
+			else if (num > 14 && strncmp(i3_buffer+14, "{\"change\":\"unspecified\"", 20) == 0
 						&& (time(0) - last_screen_change) > 5) {
 				char workspaces[] = "i3-ipc12341234";
 				int len = 0;
@@ -286,6 +293,7 @@ int main(void) {
 				//for (int c=0; c<num; c++) printf("%c", i3_buffer[c]);
 				//printf("\n");
 			}
+		#endif
 		}
 	}
 
