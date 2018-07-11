@@ -16,7 +16,7 @@ Steps:
 1. Clone the repo.
 2. If using the option to remember workspace location in multi-monitor setups (recommended, if it works), uncomment `#define MULTI_SCREEN` at the top of `mws-server.c`, and set the name of your xrandr outputs in the `WORKSPACES` array.
 3. `make && make install`
-4. Modify your i3 config, as in the file `i3_config_changes`. Remember to remove or comment out the existing `bindsym`s that deal with workspaces.
+4. Modify your i3 config, as in the file `i3_config_changes`. Remember to remove or comment out the existing `bindsym`s that deal with workspaces. Remember to add `strip_workspace_numbers yes` to the `bar {}` config, besides the key bindings.
 5. Restart i3 or, for good measure, reboot/exit and log back in.
 
 ## Internals
