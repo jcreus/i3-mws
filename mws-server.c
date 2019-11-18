@@ -198,6 +198,7 @@ int main(void) {
 		}
 		if (FD_ISSET(i3_socket_fd, &set)) {
 			char i3_buffer[32768];
+			memset(i3_buffer, 0, 32768);
 			int num = read(i3_socket_fd, i3_buffer, 32768);
 			//printf("hey! got stuff! %d %d\n", num, (int)(strstr(i3_buffer, "{")-i3_buffer));
 			if (num > 25 && strncmp(i3_buffer+14, "{\"change\":\"focus\"", 16) == 0) {
