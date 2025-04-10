@@ -2,7 +2,7 @@ INSTALL_PATH?=/usr/local
 
 all:
 	gcc mws-client.c -o mws-client
-	gcc -Wno-deprecated-declarations -Werror $(shell pkg-config --cflags json-c) mws-server.c -ljson-c -o mws-server -L json
+	gcc -g -Wno-deprecated-declarations -Werror $(shell pkg-config --cflags json-c) mws-server.c -ljson-c -o mws-server -L json
 
 install:
 	cp mws-client $(INSTALL_PATH)/bin/mws-client
